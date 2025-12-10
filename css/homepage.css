@@ -84,3 +84,54 @@ header ul li a:hover {
 section {
   padding: 40px 20px;
 }
+
+.events, .news, .contact {
+  background: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.events h2, .news h2, .contact h2 {
+  margin-bottom: 20px;
+  color: magenta;
+}
+
+.event-cards, .news-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #ff66cc;
+}
+
+.card a {
+  color: magenta;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 2px solid #333;
+  transition: transform 0.3s ease;
+}
+.card img:hover {
+transform: scale(1.05);
+}
