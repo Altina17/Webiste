@@ -4,6 +4,42 @@ margin: 0;
 background: linear-gradient(135deg, #0a0a0f, #1a0028, #32004b);
 color: white;
 }
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 40px;
+  background:#000;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 0, 255, 0.2);
+}
+
+.logo{
+  font-size:26px;
+  font-weight:800;
+  color:#fff;
+}
+
+.accent{
+  color:#ff23d0;
+}
+
+.header ul{
+  list-style:none;
+  display:flex;
+  gap:20px;
+}
+
+.header ul li a{
+  text-decoration:none;
+  color:#fff;
+  transition:color 0.3s;
+}
+
+.header ul li a:hover{
+  color:magenta;
+}
 
 .container {
 width: 90%;
@@ -13,7 +49,8 @@ margin: auto;
 .team {
 margin-top: 50px;
 margin-bottom: 50px;
-}.login-btn {
+}
+.login-btn {
     color: #ff23d0;
     border: 1px solid rgba(255, 0, 255, 0.4);
     padding: 8px 16px;
