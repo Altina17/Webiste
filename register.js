@@ -1,4 +1,5 @@
 const registerForm = document.getElementById("registerForm");
+const email = document.getElementById("email").value.trim();
 
 registerForm.addEventListener("submit", function(e){
     e.preventDefault(); 
@@ -14,5 +15,15 @@ registerForm.addEventListener("submit", function(e){
         alert("Username duhet të plotësohet.");
         return;
     }
+
+    if(!validateEmail(email)){
+    alert("Email nuk është valid.");
+    return;
+    }
     alert("Fullname dhe username valid!");
+
+    function validateEmail(email){
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email.toLowerCase());
+}
 });
