@@ -11,6 +11,14 @@ loginForm.addEventListener("submit", function(e){
         alert("Email nuk është valid. Duhet të ketë 1 @, 1 pikë dhe saktësisht 3 shkronja pas pikës (p.sh. .com).");
         return;
     }
-
     alert("Email valid! Vazhdon validimi i password.");
+
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/;
+    if(!passwordRegex.test(password)){
+        alert("Password duhet të ketë 8-20 karaktere, me shkronja të mëdha, të vogla, numra dhe karaktere speciale.");
+        return;
+    }
+
+    alert("Login valid! Formulari është gati për submit.");
+    loginForm.reset();
 });
