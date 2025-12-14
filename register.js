@@ -8,8 +8,10 @@ registerForm.addEventListener("submit", function(e){
 
     const fullname = document.getElementById("fullname").value.trim();
     const username = document.getElementById("username").value.trim();
-    if(fullname.length < 3){
-        alert("Full Name duhet të ketë minimum 3 karaktere.");
+
+    const nameRegex = /^[A-Za-z ]{3,20}$\;
+    if(!nameRegex.test(fullname)){
+        alert("Full Name duhet të ketë 3-20 shkronja dhe vetëm shkronja të mëdha ose të vogla.");
         return;
     }
 
@@ -35,7 +37,7 @@ registerForm.addEventListener("submit", function(e){
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email.toLowerCase());
     }
-        alert("Fullname dhe username valid!");
+        alert("Validimi i fullname u krye me sukses!");
         alert("Form valid! Ready to submit.");
    
 });
