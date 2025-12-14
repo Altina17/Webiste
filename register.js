@@ -1,5 +1,7 @@
 const registerForm = document.getElementById("registerForm");
 const email = document.getElementById("email").value.trim();
+const password = document.getElementById("password").value;
+const confirmPassword = document.getElementById("confirmPassword").value;
 
 registerForm.addEventListener("submit", function(e){
     e.preventDefault(); 
@@ -17,13 +19,23 @@ registerForm.addEventListener("submit", function(e){
     }
 
     if(!validateEmail(email)){
-    alert("Email nuk është valid.");
-    return;
+        alert("Email nuk është valid.");
+        return;
     }
-    alert("Fullname dhe username valid!");
+    if(password.length < 6){
+        alert("Password duhet të ketë minimum 6 karaktere.");
+        return;
+    }
 
+    if(password !== confirmPassword){
+        alert("Passwords nuk përputhen.");
+        return;
+    }
     function validateEmail(email){
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email.toLowerCase());
-}
+    }
+        alert("Fullname dhe username valid!");
+        alert("Form valid! Ready to submit.");
+   
 });
