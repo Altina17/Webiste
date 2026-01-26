@@ -478,5 +478,12 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 0 35px rgba(255,0,255,0.35);
 }
+#emailError,
+#passwordError {
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-top: 4px;
+}
 
 

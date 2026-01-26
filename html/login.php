@@ -6,6 +6,7 @@
 <title>Login</title>
 <link rel="stylesheet" href="../css/login.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -30,16 +31,21 @@
         <form id="loginForm" novalidate>
             <label>Email</label>
             <input type="email" id="email" required>
+            <small id="emailError" style="color:red"></small>
+
 
             <label>Password</label>
             <input type="password" id="password" required>
+            <small id="passwordError" style="color:red"></small>
+
+
 
             <div class="forgot-box"> 
-                <a href="#" class="forgot">Forgot Password?</a>
+            <a href="#" class="forgot">Forgot Password?</a>
             </div> 
 
             <button type="submit">Login</button> 
-            <p>Don't have an account? <a href="register.html">Register</a></p>
+            <p>Don't have an account? <a href="register.php">Register</a></p>
         </form>
 
         <div class="social-login">
