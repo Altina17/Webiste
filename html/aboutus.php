@@ -13,11 +13,11 @@
         <div class="logo">Music<span class="accent">Events</span></div>
         <nav>
           <ul>
-            <li><a href="Homepage.html">Home</a></li>
-            <li><a href="aboutus.html">About</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="Homepage.html#contact">Contact</a></li>
-            <li><a href="login.html">Login</a></li>
+            <li><a href="Homepage.php">Home</a></li>
+            <li><a href="aboutus.php">About</a></li>
+            <li><a href="news.php">News</a></li>
+            <li><a href="Homepage.php#contact">Contact</a></li>
+            <li><a href="login.php">Login</a></li>
           </ul>
         </nav>
     </header>
@@ -90,7 +90,7 @@
     </section>
 
     <section class="login-button-section">
-        <a href="login.html" class="center-login-btn">Login</a>
+        <a href="login.php" class="center-login-btn">Login</a>
     </section>
 
     <footer class="footer">
@@ -102,9 +102,9 @@
             <div class="footer-col">
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="Homepage.html">Home</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="news.html">News</a></li>
+                    <li><a href="Homepage.php">Home</a></li>
+                    <li><a href="aboutus.php">About Us</a></li>
+                    <li><a href="news.php">News</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>

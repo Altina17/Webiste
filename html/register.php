@@ -14,11 +14,11 @@
     
     <nav>
       <ul>
-        <li><a href="Homepage.html">Home</a></li>
-        <li><a href="aboutus.html">About</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="Homepage.html#contact">Contact</a></li>
-        <li><a href="login.html">Login</a></li>
+        <li><a href="Homepage.php">Home</a></li>
+        <li><a href="aboutus.php">About</a></li>
+        <li><a href="news.php">News</a></li>
+        <li><a href="Homepage.php#contact">Contact</a></li>
+        <li><a href="login.php">Login</a></li>
       </ul>
     </nav>
 </header>
@@ -45,7 +45,7 @@
 
             <button type="submit">Register</button>
 
-            <p>Already have an account? <a href="login.html">Login</a></p>
+            <p>Already have an account? <a href="login.php">Login</a></p>
         </form>
     </div>
 </section>

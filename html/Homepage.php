@@ -12,11 +12,11 @@
     <div class="logo">Music<span class="accent">Events</span></div>
 <nav>
   <ul>
-    <li><a href="Homepage.html">Home</a></li>
-    <li><a href="aboutus.html">About</a></li>
-    <li><a href="news.html">News</a></li>
+    <li><a href="Homepage.php">Home</a></li>
+    <li><a href="aboutus.php">About</a></li>
+    <li><a href="news.php">News</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="login.html">Login</a></li>
+    <li><a href="login.php">Login</a></li>
   </ul>
 </nav>
 </header>
@@ -31,7 +31,7 @@
       <p>Choose where you want to start exploring:</p>
       <div class="popup-buttons">
         <a href="#events" class="popup-btn">🎆 Events</a>
-        <a href="news.html" class="popup-btn">📰 News</a>
+        <a href="news.php" class="popup-btn">📰 News</a>
         <a href="#interviews" class="popup-btn">🎤 Interviews</a>
       </div>
       <span class="close-btn">&times;</span>
@@ -39,7 +39,7 @@
   </div>
   <div class="hero-text">
     <h2>DISCOVER THE LATEST MUSIC EVENTS</h2>
-    <a href="login.html" class="btn">GET STARTED</a>
+    <a href="login.php" class="btn">GET STARTED</a>
   </div>
 </section>
 
@@ -76,19 +76,19 @@
       <h3>New Album Releases</h3>
       <p>Discover the hottest new music.</p>
       <img src="../images/Foto5.png" alt="Album Release Image">
-      <a href="news.html#albums">Read More</a>
+      <a href="news.php#albums">Read More</a>
     </div>
     <div class="card">
       <h3>Event Highlights</h3>
       <p>Recaps from recent concerts and festivals.</p>
       <img src="../images/Foto6.png" alt="Event Highlights Image">
-      <a href="news.html#events">Read More</a>
+      <a href="news.php#events">Read More</a>
     </div>
     <div class="card">
       <h3>Artist Interviews</h3>
       <p>Behind the scenes with your favorite stars.</p>
       <img src="../images/Foto7.png" alt="Artist Interview Image">
-      <a href="news.html#interviews">Read More</a>
+      <a href="news.php#interviews">Read More</a>
     </div>
   </div>
 </section>
@@ -116,9 +116,9 @@
     <div class="footer-col">
       <h4>Company</h4>
       <ul>
-        <li><a href="Homepage.html">Home</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="news.html">News</a></li>
+        <li><a href="Homepage.php">Home</a></li>
+        <li><a href="aboutus.php">About Us</a></li>
+        <li><a href="news.php">News</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
