@@ -105,7 +105,7 @@
                     <li><a href="Homepage.php">Home</a></li>
                     <li><a href="aboutus.php">About Us</a></li>
                     <li><a href="news.php">News</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="../Homepage.php#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-col">

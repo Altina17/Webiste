@@ -1,43 +1,59 @@
 const registerForm = document.getElementById("registerForm");
 
-registerForm.addEventListener("submit", function(e){
-    e.preventDefault();
+const fullnameInput = document.getElementById("fullname");
+const usernameInput = document.getElementById("username");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const confirmPasswordInput = document.getElementById("confirmPassword");
 
-    const fullname = document.getElementById("fullname").value.trim();
-    const username = document.getElementById("username").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirmPassword").value;
+const fullnameError = document.getElementById("fullnameError");
+const usernameError = document.getElementById("usernameError");
+const emailError = document.getElementById("emailError");
+const passwordError = document.getElementById("passwordError");
+const confirmPasswordError = document.getElementById("confirmPasswordError");
+const successMessage = document.getElementById("successMessage");
 
-    const nameRegex = /^[A-Za-z]{3,20}( [A-Za-z]{3,20})?$/;
-    if(!nameRegex.test(fullname)){
-        alert("Full Name duhet të ketë 3-20 shkronja për secilin emër dhe vetëm shkronja të mëdha ose të vogla.");
-        return;
-    }
+registerForm.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    const usernameRegex = /^[A-Za-z0-9_]{3,20}$/;
-    if(!usernameRegex.test(username)){
-        alert("Username duhet të ketë 3-20 karaktere: shkronja, numra ose _");
-        return;
-    }
+  fullnameError.textContent = "";
+  usernameError.textContent = "";
+  emailError.textContent = "";
+  passwordError.textContent = "";
+  confirmPasswordError.textContent = "";
+  successMessage.textContent = "";
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-    if(!emailRegex.test(email)){
-        alert("Email nuk është valid.");
-        return;
-    }
+  const fullname = fullnameInput.value.trim();
+  const username = usernameInput.value.trim();
+  const email = emailInput.value.trim();
+  const password = passwordInput.value;
+  const confirmPassword = confirmPasswordInput.value;
 
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/;
-    if(!passwordRegex.test(password)){
-        alert("Password duhet të ketë 8-20 karaktere, me shkronja të mëdha, të vogla, numra dhe karaktere speciale.");
-        return;
-    }
+  if (fullname === "") {
+    fullnameError.textContent = "Enter full name";
+    return;
+  }
 
-    if(password !== confirmPassword){
-        alert("Passwords nuk përputhen.");
-        return;
-    }
+  if (username.length < 3) {
+    usernameError.textContent = "Username too short";
+    return;
+  }
 
-    alert("Regjistrimi u krye me sukses!");
-    registerForm.reset();
+  if (!email.includes("@") || !email.includes(".")) {
+    emailError.textContent = "Invalid email";
+    return;
+  }
+
+  if (password.length < 8) {
+    passwordError.textContent = "Password min 8 chars";
+    return;
+  }
+
+  if (password !== confirmPassword) {
+    confirmPasswordError.textContent = "Passwords do not match";
+    return;
+  }
+
+  successMessage.textContent = "Registration successful!";
+  registerForm.reset();
 });
