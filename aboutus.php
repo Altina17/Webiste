@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Music & Events</title>
+<link rel="stylesheet" href="css/aboutus.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">Music<span class="accent">Events</span></div>
+        
+    <nav>
+      <ul>
+        <li><a href="Homepage.html">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="Homepage.html#contact">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+    </header>
+    
+    <section class="hero">
+    <h1>About Us</h1>
+        <p>We create modern, professional and unforgettable musical experiences.<br> Passion + Creativity + Energy = Successful Event.</p>
+    </section>
+
+
+    <section class="about container">
+        <div class="text-box glass">
+        <h2>Who are we?</h2>
+        <p>We are a dedicated team that works with dedication to bring events and musical experiences with energy,<br>
+        modern design and professional organization.</p>
+
+        <p>Our focus is on creating events that leave the audience with strong emotions and artists space to shine.</p>
+        </div>
+
+        <div class="text-box glass">
+        <h2>Our Mission</h2>
+        <ul>
+            <li>Organization of professional events</li>
+            <li>Modern scenography and creative lighting</li>
+            <li>Marketing & promotion of artists</li>
+            <li>Complete event management</li>
+        </ul>
+        </div>
+    </section>
+
+    <section class="team container">
+        <h2>Our Team</h2>
+
+        <div class="team-grid">
+
+        <div class="member-card glass">
+            <img src="images/7kgv88p-ebook-shortedge-384.jpg" alt="Anita - Event Manager">
+            <h3>Sarah</h3>
+        <p>Event Manager</p>
+        </div>
+
+        <div class="member-card glass">
+            <img src="images/woman-beauty-atlas-mihaela-noroc-195__880.jpg" alt="Altina - Web Developer">
+            <h3>Ayana</h3>
+        <p>Web Developer</p>
+        </div>
+
+        <div class="member-card glass">
+            <img src="images/6b58ac671cd171bcb3d4b88bc34fefdf.jpg" alt="Blerim - Design & Marketing">
+            <h3>John</h3>
+        <p>Design & Marketing</p>
+        </div>
+
+        </div>
+        </section>
+
+        <section class="offers container">
+            <h2>What we offer?</h2>
+
+           <div class="offer-grid">
+
+    <div class="offer glass">
+        <h3>🎧 Music Production</h3>
+        <p>Professional audio, mixing, equipment and technical staff.</p>
+    </div>
+
+    <div class="offer glass">
+        <h3>📅 Event Organization</h3>
+        <p>Planning, coordination, and end-to-end planning.</p>
+    </div>
+
+    <div class="offer glass">
+        <h3>📣 Promotion & Marketing</h3>
+        <p>Digital campaigns, social media, and branding.</p>
+    </div>
+
+    <div class="offer glass">
+        <h3>🎆 Stage & Design</h3>
+        <p>Visual conception, lighting, effects and décor.</p>
+    </div>
+
+</div>
+
+        </section>
+        <body class="about-page"></body>
+    <section class="login-button-section">
+        <a href="login.html" class="center-login-btn">Login</a>
+    </section>
+    <footer class="footer">
+    <div class="footer-container">
+  
+      <div class="footer-col">
+        <h3>Music<span class="accent">Events</span></h3>
+        <p>
+          MusicEvents is a platform dedicated to promoting music events,
+          artist news and exclusive interviews worldwide.
+        </p>
+      </div>
+  
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="Homepage.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Email: contact@musicevents.com</p>
+        <p>Phone: +383 44 123 456</p>
+      </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© 2025 MusicEvents. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

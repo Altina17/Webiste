@@ -51,24 +51,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login</title>
 <link rel="stylesheet" href="../css/login.css">
+<link rel="stylesheet" href="../css/header-footer.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
-<header class="header">
-    <div class="logo">Music<span class="accent">Events</span></div>
-    
-    <nav>
-      <ul>
-        <li><a href="Homepage.php">Home</a></li>
-        <li><a href="aboutus.php">About</a></li>
-        <li><a href="news.php">News</a></li>
-        <li><a href="Homepage.php#contact">Contact</a></li>
-        <li><a href="login.php">Login</a></li>
-      </ul>
-    </nav>
-</header>
+<?php include 'include/header.php'; ?>
 
 <section class="center-form">
     <div class="form-box glass">

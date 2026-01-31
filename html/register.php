@@ -55,19 +55,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <meta charset="UTF-8">
   <title>Register</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/login.css">
   <link rel="stylesheet" href="../css/register.css">
+  <link rel="stylesheet" href="../css/header-footer.css">
 </head>
 <body>
 
-<header class="header">
-  <div class="logo">Music<span class="accent">Events</span></div>
-  <nav>
-    <ul>
-      <li><a href="Homepage.php">Home</a></li>
-      <li><a href="login.php">Login</a></li>
-    </ul>
-  </nav>
-</header>
+<?php include 'include/header.php'; ?>
 
 <section class="center-form">
   <div class="form-box glass">

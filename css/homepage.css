@@ -1,62 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #111;
-  color: #fff;
-  line-height: 1.6;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 40px;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 0, 255, 0.2);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  font-size: 26px;
-  font-weight: 800;
-  color: #fff;
-}
-
-.accent {
-  color: #ff23d0;
-  text-shadow: 0 0 8px rgba(255, 35, 208, 0.6);
-}
-
-.header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.header nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.header nav ul li a:hover {
-  color: #ff23d0;
-  text-shadow: 0 0 8px rgba(255, 35, 208, 0.6);
-}
-
 .hero {
   position: relative;
   height: 500px;
@@ -252,6 +193,7 @@ section {
   background: #ff66cc;
 }
 
+<<<<<<< HEAD
 footer {
   background: #000;
   text-align: center;
@@ -368,3 +310,5 @@ footer {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+=======
+>>>>>>> 7c69dd546490c245d91832f8df333d5401fa32b3

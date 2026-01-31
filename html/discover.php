@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Discover Events | MusicEvents</title>
   <link rel="stylesheet" href="../css/discover.css">
+  <link rel="stylesheet" href="../css/header-footer.css">
 </head>
 <body>
-
+<?php include 'include/header.php'; ?>
 <section class="hero">
   <div class="overlay"></div>
   <div class="hero-content">
@@ -84,9 +85,7 @@
   <a href="Homepage.php#contact">Contact Us</a>
 </section>
 
-<footer class="footer">
-  <p>© 2025 MusicEvents. All rights reserved.</p>
-</footer>
+<?php include 'include/footer.php'; ?>
 
 </body>
 </html>
