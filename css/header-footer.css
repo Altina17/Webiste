@@ -131,3 +131,47 @@ footer {
   font-size: 14px;
   color: #aaa;
 }
+
+@media (max-width: 900px) {
+  .hero-text h2 {
+    font-size: 28px;
+  }
+
+  .event-cards,
+  .news-cards {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .header nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero {
+    height: 320px;
+  }
+
+  .hero-text h2 {
+    font-size: 22px;
+  }
+
+  .event-cards,
+  .news-cards {
+    flex-direction: column;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
