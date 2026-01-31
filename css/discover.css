@@ -10,11 +10,11 @@ body {
   color: #fff;
 }
 
-/* HERO */
+
 .hero {
   position: relative;
   height: 60vh;
-  background: url("../images/discover-bg.jpg") center/cover no-repeat;
+  background: url("../images/br.png") center/cover no-repeat;
 }
 
 .overlay {
@@ -42,7 +42,7 @@ body {
   color: #ccc;
 }
 
-/* EVENTS */
+
 .events {
   padding: 70px 40px;
 }
@@ -96,7 +96,7 @@ body {
   color: #888;
 }
 
-/* CONTACT */
+
 .contact-cta {
   background: #1a1a1a;
   padding: 70px 20px;
@@ -118,7 +118,7 @@ body {
   background: #ff66cc;
 }
 
-/* FOOTER */
+
 .footer {
   background: #000;
   text-align: center;
