@@ -486,4 +486,11 @@ body {
     margin-top: 4px;
 }
 
-
+.alert.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}

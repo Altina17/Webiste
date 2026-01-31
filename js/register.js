@@ -55,5 +55,5 @@ registerForm.addEventListener("submit", function (e) {
   }
 
   successMessage.textContent = "Registration successful!";
-  registerForm.reset();
+  // registerForm.reset();
 });
