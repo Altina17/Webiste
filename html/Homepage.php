@@ -5,21 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homepage</title>
   <link rel="stylesheet" href="../css/homepage.css">
+  <link rel="stylesheet" href="../css/header-footer.css">
 </head>
 <body>
-  
-<header class="header">
-    <div class="logo">Music<span class="accent">Events</span></div>
-<nav>
-  <ul>
-    <li><a href="Homepage.php">Home</a></li>
-    <li><a href="aboutus.php">About</a></li>
-    <li><a href="news.php">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="login.php">Login</a></li>
-  </ul>
-</nav>
-</header>
+  <?php include 'include/header.php'; ?>
 
 <section class="hero">
   <video autoplay muted loop>
@@ -103,45 +92,6 @@
   </form>
 </section>
 
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-col">
-      <h3>Music<span class="accent">Events</span></h3>
-      <p>
-        MusicEvents is a platform dedicated to promoting music events,
-        artist news and exclusive interviews worldwide.
-      </p>
-    </div>
-
-    <div class="footer-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="Homepage.php">Home</a></li>
-        <li><a href="aboutus.php">About Us</a></li>
-        <li><a href="news.php">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4>Support</h4>
-      <ul>
-        <li><a href="#">Help Center</a></li>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <p>Email: contact@musicevents.com</p>
-      <p>Phone: +383 44 123 456</p>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 MusicEvents. All rights reserved.</p>
-  </div>
-</footer>
+<?php include 'include/footer.php'; ?>
 </body>
 </html>
