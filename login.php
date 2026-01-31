@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    
+    <header class="header">
+        <div class="logo">Music<span class="accent">Events</span></div>
+        
+    <nav>
+
+      <ul>
+        <li><a href="Homepage.html">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="Homepage.html#contact">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+    </header>
+
+<section class="center-form">
+    <div class="form-box glass">
+        <h2>Login</h2>
+
+        <form id="loginForm" novalidate>
+            <label>Email</label>
+            <input type="email" id="email" required>
+
+            <label>Password</label>
+            <input type="password" id="password" required>
+
+            <div class="forgot-box"> <a href="#" class="forgot">Forgot Password?</a></div> 
+            <button type="submit">Login</button> 
+            <p>Don't have an account? <a href="register.html">Register</a></p>
+        </form>
+
+
+        <div class="social-login">
+            <p>Or login with</p>
+
+        <div class="social-buttons">
+            <button class="google"><i class="fab fa-google"></i></button>
+            <button class="facebook"><i class="fab fa-facebook-f"></i></button>
+            <button class="instagram"><i class="fab fa-instagram"></i></button>
+        </div>
+        </div>
+
+    </div>
+</section>
+
+<script src="login.js"></script>
+
+
+</body>
+</html>
