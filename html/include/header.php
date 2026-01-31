@@ -5,7 +5,7 @@
     <li><a href="Homepage.php">Home</a></li>
     <li><a href="aboutus.php">About</a></li>
     <li><a href="news.php">News</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="homepage.php#contact">Contact</a></li>
     <li><a href="login.php">Login</a></li>
   </ul>
 </nav>

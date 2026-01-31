@@ -1,0 +1,36 @@
+.buy-section {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.buy-section h2 {
+  color: magenta;
+  margin-bottom: 20px;
+}
+
+.buy-section input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: none;
+}
+
+.buy-section button {
+  width: 100%;
+  padding: 12px;
+  background: magenta;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.buy-section button:hover {
+  background: #ff66cc;
+}
