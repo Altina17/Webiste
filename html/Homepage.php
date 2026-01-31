@@ -39,7 +39,7 @@
   </div>
   <div class="hero-text">
     <h2>DISCOVER THE LATEST MUSIC EVENTS</h2>
-    <a href="login.php" class="btn">GET STARTED</a>
+    <a href="discover.php" class="btn">GET STARTED</a>
   </div>
 </section>
 
