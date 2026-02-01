@@ -34,11 +34,25 @@ class Database {
         }
         return $users;
     }
+     // NEWS methods
+    public function getNews() {
+        $sql = "SELECT id, title, description, category, created_at FROM news ORDER BY id ASC";
+        $result = $this->conn->query($sql);
+        $news = [];
+        if ($result && $result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $news[] = $row;
+            }
+        }
+        return $news;
+    }
 }
+
 
 // Create database object and fetch users
 $db = new Database();
 $users = $db->getUsers();
+$newsList = $db->getNews();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -102,27 +116,48 @@ $users = $db->getUsers();
             </table>
         </div>
 
-        <div class="card">
-            <h2>News</h2>
+         <div class="card">
+            <div class="news-header">
+                <h2>News </h2>
+                <a href="add_news.php" > Add News</a>
+            </div>
             <table>
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>Title</th>
+                        <th>Category</th>   
+                        <th>Description</th>   
                         <th>Created At</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
+                <?php if (!empty($newsList)): ?>
+                    <?php foreach ($newsList as $n): ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars($n['id']); ?></td>
+                            <td><?php echo htmlspecialchars($n['title']); ?></td>
+                            <td><?php echo htmlspecialchars($n['category']); ?></td>
+                            <td><?php echo htmlspecialchars(implode(' ', array_slice(explode(' ', $n['description']), 0, 10)) . (str_word_count($n['description']) > 10 ? '...' : '')); ?></td>
+                            <td><?php echo htmlspecialchars($n['created_at'] ?? ''); ?></td>
+                            <td class="update-delete">
+                                <button type="button" class="edit-btn">
+                                <a href="edit_news.php?id=<?php echo (int)$n['id']; ?>" class="btn">Edit</a></button>
+                               <form method="post" action="delete_news.php"
+      onsubmit="return confirm('Are you sure you want to delete this news item?');"
+      style="display:inline;">
+    <input type="hidden" name="id" value="<?php echo (int)$n['id']; ?>">
+    <button type="submit" class="delete-btn">Delete</button>
+</form>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else: ?>
                     <tr>
-                        <td>1</td>
-                        <td>New Music Event This Weekend</td>
-                        <td>2026-02-01</td>
+                        <td colspan="5" style="text-align:center;">No news found</td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Concert Tickets Released</td>
-                        <td>2026-02-01</td>
-                    </tr>
+                <?php endif; ?>
                 </tbody>
             </table>
         </div>

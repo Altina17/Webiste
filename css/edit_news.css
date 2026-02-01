@@ -1,0 +1,36 @@
+.editnews {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Target the form itself (not a nested form) */
+.editnews {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.editnews input,
+.editnews textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box; /* important to prevent overflow */
+}
+
+.editnews button {
+  background: magenta;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.editnews button:hover {
+  background: #ff66cc;
+}

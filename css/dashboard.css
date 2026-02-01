@@ -91,3 +91,65 @@ body {
 .card table tr:hover {
     background-color: rgba(255, 35, 208, 0.1);
 }
+.news-header {
+    display: flex;
+    align-items: center !important;
+    justify-content: space-between;
+    gap: 20px;
+}
+.news-header a {
+    color: white;
+}
+.news-header h2 {
+    margin-bottom: 0px;
+}
+.edit-btn {
+    background-color: #ff23d0;
+    color: white;
+    border: 1px solid rgba(255, 0, 255, 0.4);
+    padding: 8px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s ease;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+.edit-btn a {
+    color:white;
+    text-decoration: none;
+}
+
+.edit-btn:hover {
+    background: rgba(255, 0, 255, 0.2);
+    color: white;
+    box-shadow: 0 0 20px rgba(255,0,255,0.3);
+}
+
+.delete-btn {
+    background-color: #ff23d0;
+    color: white;
+    border: 1px solid rgba(255, 0, 255, 0.4);
+    padding: 8px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s ease;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+.delete-btn a {
+    color:white;
+    text-decoration: none;
+}
+
+.delete-btn:hover {
+    background: rgba(255, 0, 255, 0.2);
+    color: white;
+    box-shadow: 0 0 20px rgba(255,0,255,0.3);
+}
+.update-delete {
+    display: flex;
+    border-bottom: 0px !important;
+    gap:20px;
+}

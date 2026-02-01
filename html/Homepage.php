@@ -5,6 +5,34 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit;
 }
+class Database {
+    private $host = "localhost";
+    private $user = "root";
+    private $password = "";
+    private $dbname = "my_project";
+    public $conn;
+
+    public function __construct() {
+        $this->conn = new mysqli($this->host, $this->user, $this->password, $this->dbname);
+
+        if ($this->conn->connect_error) {
+            die("Database connection failed: " . $this->conn->connect_error);
+        }
+    }
+  public function getNews() {
+        $sql = "SELECT id, title, description, category, created_at FROM news ORDER BY id ASC";
+        $result = $this->conn->query($sql);
+        $news = [];
+        if ($result && $result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $news[] = $row;
+            }
+        }
+        return $news;
+    }}
+    $db = new Database();
+    $newsList = $db->getNews();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,28 +97,33 @@ if (!isset($_SESSION['user_id'])) {
   </div>
 </section>
 
-<section class="news">
+<section class="news ">
   <h2>Latest News</h2>
-  <div class="news-cards">
-    <div class="card">
-      <h3>New Album Releases</h3>
-      <p>Discover the hottest new music.</p>
-      <img src="../images/Foto5.png" alt="Album Release Image">
-      <a href="news.php#albums">Read More</a>
+
+  
+  <?php if (empty($newsList)): ?>
+    <p style="text-align: center; color: #888; padding: 2rem;">
+      No news articles available at the moment.
+    </p>
+  <?php else: ?>
+    <div class="news-cards news-grid ">
+      <?php foreach ($newsList as $item): ?>
+        <div class="card news-section">
+          <h3><?= htmlspecialchars($item['title']) ?></h3>
+          
+          
+            
+            <span class="date"><?= date('M d, Y', strtotime($item['created_at'])) ?></span>
+        
+          
+          <p><?= htmlspecialchars(substr($item['description'], 0, 120)) ?>
+            <?= strlen($item['description']) > 120 ? '...' : '' ?></p>
+          
+          <span class="category"><?= htmlspecialchars($item['category']) ?></span>
+        </div>
+      <?php endforeach; ?>
     </div>
-    <div class="card">
-      <h3>Event Highlights</h3>
-      <p>Recaps from recent concerts and festivals.</p>
-      <img src="../images/Foto6.png" alt="Event Highlights Image">
-      <a href="news.php#events">Read More</a>
-    </div>
-    <div class="card">
-      <h3>Artist Interviews</h3>
-      <p>Behind the scenes with your favorite stars.</p>
-      <img src="../images/Foto7.png" alt="Artist Interview Image">
-      <a href="news.php#interviews">Read More</a>
-    </div>
-  </div>
+  <?php endif; ?>
 </section>
 
 <section id="contact" class="contact">

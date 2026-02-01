@@ -1,0 +1,36 @@
+.addnews {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Target the form itself (not a nested form) */
+.addnews {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.addnews input,
+.addnews textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box; /* important to prevent overflow */
+}
+
+.addnews button {
+  background: magenta;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.addnews button:hover {
+  background: #ff66cc;
+}
