@@ -96,6 +96,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   </div>
 </section>
 
-<!-- <script src="../js/register.js" defer></script> -->
+ <script src="../js/register.js" defer></script> 
 </body>
 </html>

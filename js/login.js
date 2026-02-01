@@ -1,59 +1,77 @@
-const loginForm = document.getElementById("loginForm");
-const emailInput = document.getElementById("email");
-const passwordInput = document.getElementById("password");
-const emailError = document.getElementById("emailError");
-const passwordError = document.getElementById("passwordError");
-const successMessage = document.getElementById("successMessage");
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('loginForm');
 
-loginForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+    const patterns = {
+        email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+        password: /^.{6,}$/
+    };
 
-    let valid = true;
+    const messages = {
+        email: {
+            empty: "Email is required",
+            invalid: "Please enter a valid email address"
+        },
+        password: {
+            empty: "Password is required",
+            invalid: "Password must be at least 6 characters"
+        }
+    };
 
-    emailError.textContent = "";
-    passwordError.textContent = "";
-
-    const email = emailInput.value.trim();
-    const password = passwordInput.value;
-
-
-    if (email === "") {
-        emailError.textContent = "Please enter your email.";
-        valid = false;
-        return;
-    } else if (email.length < 10) {
-        emailError.textContent = "Email must be at least 10 characters long.";
-        valid = false;
-    } else if (!email.includes("@")) {
-        emailError.textContent = "Email must contain the @ symbol.";
-        valid = false;
-    } else if (!email.includes(".")) {
-        emailError.textContent = "Email must contain a domain (example: .com).";
-        valid = false;
+    function showError(fieldName, message) {
+        const errorEl = document.getElementById(fieldName + 'Error');
+        errorEl.textContent = message;
+        errorEl.style.color = '#e74c3c';
     }
 
-
-    if (password === "") {
-        passwordError.textContent = "Please enter your password.";
-        valid = false;
-    } else if (password.length < 8) {
-        passwordError.textContent = "Password must be at least 8 characters long.";
-        valid = false;
-    } else if (!/[A-Z]/.test(password)) {
-        passwordError.textContent = "Password must contain at least one uppercase letter.";
-        valid = false;
-    } else if (!/[a-z]/.test(password)) {
-        passwordError.textContent = "Password must contain at least one lowercase letter.";
-        valid = false;
-    } else if (!/\d/.test(password)) {
-        passwordError.textContent = "Password must contain at least one number.";
-        valid = false;
-    } else if (!/[@$!%*?&]/.test(password)) {
-        passwordError.textContent = "Password must contain at least one special character.";
-        valid = false;
+    function clearError(fieldName) {
+        const errorEl = document.getElementById(fieldName + 'Error');
+        errorEl.textContent = '';
     }
 
-    successMessage.textContent = "Login successful!";
-    loginForm.reset();
+    function validateField(input) {
+        const name = input.name;
+        const value = input.value.trim();
 
+        clearError(name);
+
+        if (!value) {
+            showError(name, messages[name]?.empty || "This field is required");
+            return false;
+        }
+
+        if (patterns[name] && !patterns[name].test(value)) {
+            showError(name, messages[name]?.invalid || "Invalid format");
+            return false;
+        }
+
+        return true;
+    }
+
+    ['email', 'password'].forEach(name => {
+        const input = document.getElementById(name);
+        if (input) {
+            input.addEventListener('blur', () => validateField(input));
+        }
+    });
+
+    document.getElementById('password')?.addEventListener('input', function() {
+        validateField(this);
+    });
+
+    form.addEventListener('submit', e => {
+        let isValid = true;
+
+        ['email', 'password'].forEach(name => {
+            const input = document.getElementById(name);
+            if (input && !validateField(input)) {
+                isValid = false;
+            }
+        });
+
+        if (!isValid) {
+            e.preventDefault();
+            const firstError = form.querySelector('small:not(:empty)');
+            if (firstError) firstError.previousElementSibling?.focus();
+        }
+    });
 });
