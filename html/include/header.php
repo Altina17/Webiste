@@ -17,7 +17,7 @@ if (session_status() === PHP_SESSION_NONE) {
       <li><a href="Homepage.php">Home</a></li>
       <li><a href="aboutus.php">About</a></li>
       <li><a href="news.php">News</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="Homepage.php#contact">Contact</a></li>
 
       <?php if (isset($_SESSION['user_id'])): ?>
         

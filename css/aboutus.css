@@ -344,3 +344,44 @@ font-size: 20px;
 .about-page .footer-col ul li a.active {
   color: #ff23d0;
 }
+.dropdown {
+    position: relative;
+}
+.dropdown .logout-link {
+  color:#000;
+    border-radius: 6px;
+}
+.dropdown:hover .logout-link {
+  color:#000;
+    border-radius: 6px;
+}
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: rgba(255,255,255,0.95);
+    min-width: 140px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    color: #111;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+  color:#000;
+    background-color: #f3f4f6;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
