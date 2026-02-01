@@ -1,5 +1,5 @@
 <?php
-// admin/add_news.php
+// admin- shtimi te news
 session_start();
 
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
@@ -47,9 +47,6 @@ class Database {
     }
 }
 
-/* ===========================
-   FUNCTIONALITY (MISSING PART)
-   =========================== */
 
 $db = new Database();
 $errors = [];

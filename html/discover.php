@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../css/discover.css">
   <link rel="stylesheet" href="../css/header-footer.css">
 
-  <!-- Bootstrap CSS per slider -->
+  <!-- Bootstrap css per slider -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -25,7 +25,7 @@
   </div>
 </section>
 
-<!--SLIDER-->
+<!--slider-i-->
 <section class="events">
   <h2>Upcoming Events</h2>
 
@@ -82,7 +82,7 @@
 
     </div>
 
-    <!-- Butonat -->
+    
     <button class="carousel-control-prev" type="button" data-bs-target="#eventsCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
       <span class="visually-hidden">Previous</span>
@@ -103,7 +103,7 @@
 
 <?php include 'include/footer.php'; ?>
 
-<!-- Bootstrap JS per slider -->
+<!-- Bootstrap javascript per slider -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

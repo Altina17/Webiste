@@ -1,5 +1,5 @@
 <?php
-// admin/delete_news.php
+
 session_start();
 
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
@@ -29,9 +29,6 @@ class Database {
         $this->conn->set_charset("utf8mb4");
     }
 
-    /* ===========================
-       DELETE NEWS METHOD
-       =========================== */
     public function deleteNews($id) {
         $stmt = $this->conn->prepare(
             "DELETE FROM news WHERE id = ?"
@@ -48,10 +45,6 @@ class Database {
         return $result;
     }
 }
-
-/* ===========================
-   FUNCTIONALITY
-   =========================== */
 
 $db = new Database();
 

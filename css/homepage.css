@@ -195,8 +195,8 @@ section {
  .news .news-cards.news-grid
 {
    display: grid !important;
-  grid-template-columns: repeat(3, 1fr);    /* 3 equal columns on large screens */
-  gap: 20px;                                 /* better spacing between cards */
+  grid-template-columns: repeat(3, 1fr);   
+  gap: 20px;                               
   padding: 20px 0;
   margin: 0 auto;
   max-width: 1400px; 
@@ -204,7 +204,7 @@ section {
 
 @media (max-width: 768px) {
   .news .news-cards.news-grid {
-    grid-template-columns: repeat(1, 1fr);   /* 2 columns on mobile/tablet */
+    grid-template-columns: repeat(1, 1fr); 
     gap: 15px;
     padding: 15px 10px;
   }

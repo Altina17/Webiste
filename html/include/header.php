@@ -9,7 +9,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
   <nav>
     <ul>
-        <!-- Show Dashboard link ONLY for admins -->
+        <!-- dashboard qe shfaqet vetem te admin -->
 
        <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
           <li><a href="dashboard.php">Dashboard</a></li>

@@ -3,7 +3,7 @@
   padding: 60px 20px;
 }
 
-/* Target the form itself (not a nested form) */
+
 .editnews {
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@
   padding: 12px;
   border: none;
   border-radius: 5px;
-  box-sizing: border-box; /* important to prevent overflow */
+  box-sizing: border-box; 
 }
 
 .editnews button {

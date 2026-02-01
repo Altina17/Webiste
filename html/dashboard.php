@@ -21,7 +21,7 @@ class Database {
         }
     }
 
-    // Fetch all users excluding password
+    
     public function getUsers() {
         $sql = "SELECT id, full_name, username, email, role, created_at FROM users ORDER BY id DESC";
         $result = $this->conn->query($sql);
@@ -34,7 +34,7 @@ class Database {
         }
         return $users;
     }
-     // NEWS methods
+     
     public function getNews() {
         $sql = "SELECT id, title, description, category, created_at FROM news ORDER BY id ASC";
         $result = $this->conn->query($sql);
@@ -49,7 +49,6 @@ class Database {
 }
 
 
-// Create database object and fetch users
 $db = new Database();
 $users = $db->getUsers();
 $newsList = $db->getNews();

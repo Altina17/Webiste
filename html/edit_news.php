@@ -1,5 +1,5 @@
 <?php
-// admin/edit_news.php
+
 session_start();
 
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
@@ -29,10 +29,7 @@ class Database {
         $this->conn->set_charset("utf8mb4");
     }
 
-    /* ===========================
-       GET SINGLE NEWS
-       =========================== */
-    public function getNewsById($id) {
+   public function getNewsById($id) {
         $stmt = $this->conn->prepare(
             "SELECT id, title, description, category FROM news WHERE id = ?"
         );
@@ -50,9 +47,6 @@ class Database {
         return $news;
     }
 
-    /* ===========================
-       UPDATE NEWS
-       =========================== */
     public function updateNews($id, $title, $description, $category) {
         $stmt = $this->conn->prepare(
             "UPDATE news
@@ -72,14 +66,11 @@ class Database {
     }
 }
 
-/* ===========================
-   LOGIC
-   =========================== */
 
 $db = new Database();
 $errors = [];
 
-// GET ID FROM URL
+
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
 if ($id <= 0) {
@@ -87,7 +78,7 @@ if ($id <= 0) {
     exit;
 }
 
-// FETCH CURRENT NEWS
+
 $news = $db->getNewsById($id);
 
 if (!$news) {
@@ -95,7 +86,7 @@ if (!$news) {
     exit;
 }
 
-// HANDLE FORM SUBMIT
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = trim($_POST['title'] ?? '');
     $description = trim($_POST['description'] ?? '');

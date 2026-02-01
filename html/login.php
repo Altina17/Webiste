@@ -21,12 +21,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             if (password_verify($password, $user['password'])) {
                session_regenerate_id(true);
-                // Save session data
+                // ruaj session data
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['username'] = $user['username'];
                 $_SESSION['role'] = $user['role'];
 
-                // Redirect based on role
+                // ne baze te rolit direktoj
                 if ($user['role'] === 'admin') {
                     header("Location: dashboard.php");
                 } else {
