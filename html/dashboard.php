@@ -54,11 +54,12 @@ $users = $db->getUsers();
     <div class="logo">Music<span class="accent">Events</span></div>
     <nav>
         <ul>
-            <li><a href="logout.php">Logout</a></li>
+            <li><a href="dashboard.php">Dashboard</a></li>
              <li><a href="Homepage.php">Home</a></li>
             <li><a href="aboutus.php">About</a></li>
             <li><a href="news.php">News</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="logout.php">Logout</a></li>
         </ul>
     </nav>
 </header>

@@ -2,11 +2,10 @@
 session_start();
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: Homepage.php");
+    header("Location: login.php");
     exit;
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,42 +16,14 @@ if (!isset($_SESSION['user_id'])) {
   <link rel="stylesheet" href="../css/header-footer.css">
 </head>
 <body>
-<<<<<<< HEAD
-  
-<header class="header">
-    <div class="logo">Music<span class="accent">Events</span></div>
-<nav>
-  <ul>
-    <li><a href="Homepage.php">Home</a></li>
-    <li><a href="aboutus.php">About</a></li>
-    <li><a href="news.php">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <?php if (!isset($_SESSION['user_id'])): ?>
-        <!-- Show login if NOT logged in -->
-        <li><a href="login.php">Login</a></li>
 
-    <?php else: ?>
-        <!-- Show user dropdown if logged in -->
-        <li class="dropdown">
-            <a href="#" class="dropbtn">
-                <?php echo htmlspecialchars($_SESSION['username']); ?> 
-            </a>
-            <div class="dropdown-content">
-                <a class="logout-link" href="logout.php">Logout</a>
-            </div>
-        </li>
-    <?php endif; ?>
-  </ul>
-</nav>
-</header>
-=======
-  <?php include 'include/header.php'; ?>
->>>>>>> 7c69dd546490c245d91832f8df333d5401fa32b3
+<?php include 'include/header.php'; ?>
 
 <section class="hero">
   <video autoplay muted loop>
     <source src="../images/VIDIO1.mp4" type="video/mp4" />
   </video>
+
   <div id="intro-popup" class="popup">
     <div class="popup-content">
       <h2>Welcome to Music & Events</h2>
@@ -65,13 +36,14 @@ if (!isset($_SESSION['user_id'])) {
       <span class="close-btn">&times;</span>
     </div>
   </div>
+
   <div class="hero-text">
     <h2>DISCOVER THE LATEST MUSIC EVENTS</h2>
     <a href="discover.php" class="btn">GET STARTED</a>
   </div>
 </section>
 
-<section class="events">
+<section class="events" id="events">
   <h2>Upcoming Events</h2>
   <div class="event-cards">
     <div class="card">
@@ -124,13 +96,14 @@ if (!isset($_SESSION['user_id'])) {
 <section id="contact" class="contact">
   <h2>Contact Us</h2>
   <form id="contact-form">
-    <input type="text" name="name" placeholder="Name" required />
-    <input type="email" name="email" placeholder="Email" required />
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
     <textarea name="message" placeholder="Message" required></textarea>
     <button type="submit">SEND</button>
   </form>
 </section>
 
 <?php include 'include/footer.php'; ?>
+
 </body>
-</html> 
+</html>
